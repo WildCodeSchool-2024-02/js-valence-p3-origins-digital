@@ -1,9 +1,76 @@
 @tailwind base;
+
+@layer base {
+  body {
+    @apply min-h-screen bg-black;
+  }
+  #root {
+    @apply min-h-screen;
+  }
+}
+
 @tailwind components;
 @tailwind utilities;
 
 @layer utilities {
   .nav-link {
     @apply hover:text-primary;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  button,
+  textarea {
+    @apply text-xl p-2.5 border-0 outline-none rounded-lg;
+  }
+
+  .img-container {
+    @apply w-[65%] hidden lg:block lg:h-full lg:bg-form-image lg:bg-left lg:bg-cover lg:bg-no-repeat lg:clip-path-myPolygon;
+  }
+
+  form > div {
+    @apply flex flex-col mb-2;
+  }
+
+  .formInput {
+    @apply text-2xl min-h-[50px] mt-2 rounded-lg;
+  }
+
+  label {
+    @apply text-white text-xl smallScreen:text-2xl;
+  }
+
+  label,
+  button {
+    @apply mt-4;
+  }
+
+  form > button {
+    @apply bg-primary min-h-[50px] text-white text-2xl font-semibold md:font-bold;
+  }
+
+  .instructions {
+    @apply text-xs rounded-md bg-black text-white p-[0.25rem] relative -bottom-[10px];
+  }
+
+  .instructions > svg {
+    @apply mr-[0.25rem];
+  }
+
+  .hide {
+    @apply hidden;
+  }
+
+  .valid {
+    @apply text-[#32cd32] ml-[0.25rem];
+  }
+
+  .invalid {
+    @apply text-red-800 ml-[0.25rem];
+  }
+
+  .errmsg {
+    @apply bg-pink-300 text-red-800 text-xs font-bold p-[0.5rem] mt-[0.8rem];
   }
 }

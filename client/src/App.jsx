@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <Header />
-      <main>
+      <main className="min-h-full">
         <Outlet />
       </main>
       <Footer />
