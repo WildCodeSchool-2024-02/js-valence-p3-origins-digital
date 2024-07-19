@@ -19,10 +19,12 @@ import DashboardVideos, {
 } from "./pages/dashboard/DashboardVideos";
 import DashboardVideo from "./pages/dashboard/DashboardVideo";
 import DashboardAddVideo from "./pages/dashboard/DashboardAddVideo";
+import Error from "./pages/Error";
 
 const router = createBrowserRouter([
   {
     element: <App />,
+    errorElement: <Error />,
     children: [
       {
         path: "/",
