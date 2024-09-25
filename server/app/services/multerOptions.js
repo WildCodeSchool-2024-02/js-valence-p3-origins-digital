@@ -1,7 +1,7 @@
 const multer = require("multer");
 const path = require("path");
 
-const fileTypes = ["video/mp4", "video/webm"];
+const fileTypes = ["video/mp4"];
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
