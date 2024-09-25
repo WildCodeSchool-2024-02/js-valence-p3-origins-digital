@@ -35,7 +35,7 @@ router.get("/:id", read);
 
 router.put("/:id", verifyToken, verifyAdmin, edit);
 
-router.post("/", verifyToken, verifyAdmin, uploadMulter, uploadVideo, add);
+router.post("/", uploadMulter, uploadVideo, add);
 
 router.delete("/:id", verifyToken, verifyAdmin, destroy);
 
